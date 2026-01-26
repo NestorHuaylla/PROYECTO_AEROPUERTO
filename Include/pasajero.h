@@ -1,16 +1,25 @@
-#ifndef PERSONA_H
-#define PERSONA_H
-#include<iostrteam>
-#include<tuple>
-using namespace std;
-class persona{
+#ifndef PASAJERO_H
+#define PASAJERO_H
+
+class Pasajero {
     private:
-    string nombre;
-    int edad;
-    int dni;
-    int pasaporte;
+        char dni[10]; 
+        char nombres[50]; 
+        char telefono[15]; 
+        char nacionalidad[20];  
+
     public:
-    persona(string nom, int ed, int dni, int pas);
-    tuple<string,int,int,int> getdatos();
-    void mostrarDatos();
-}
+        Pasajero();
+        Pasajero(char Dni[10], char Nom[50], char Tel[15], char Nac[20]);
+
+        void SetPasajero(char Dni[10], char Nom[50], char Tel[15], char Nac[20]);
+        
+        char* GetDni();
+        char* GetNombres();
+        char* GetTelefono();
+        char* GetNacionalidad();
+
+        void Mostrar();
+};
+
+#endif
